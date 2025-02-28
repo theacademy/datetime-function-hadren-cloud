@@ -22,9 +22,10 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getTodaysDate() {
 		//YOUR CODE STARTS HERE
-		return LocalDate.now();
-		//YOUR CODE ENDS HERE
 
+		return LocalDate.now();
+
+		//YOUR CODE ENDS HERE
 	}
 
 	/*
@@ -33,9 +34,11 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getLaterDatebyDays(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		return date.plusDays(x);
-		//YOUR CODE ENDS HERE
 
+		// Add x days to the input date
+		return date.plusDays(x);
+
+		//YOUR CODE ENDS HERE
 	}
 
 	/*
@@ -44,9 +47,11 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getPreviousDatebyWeeks(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		return date.minusWeeks(x);
-		//YOUR CODE ENDS HERE
 
+		// Subtract x weeks from the input date
+		return date.minusWeeks(x);
+
+		//YOUR CODE ENDS HERE
 	}
 
 	/*
@@ -56,10 +61,13 @@ public class DateTimeFunctions {
 	 */
 	public static String getTimeDifference(LocalDate date1, LocalDate date2) {
 		//YOUR CODE STARTS HERE
-		Period period = Period.between(date1, date2);
-		return "Years-" + period.getYears() + ":Months-" + period.getMonths() + ":Days-" + period.getDays();
-		//YOUR CODE ENDS HERE
 
+
+		Period period = Period.between(date1, date2);
+		// Return the period between date1 and date2 in the specified format
+		return "Years-" + period.getYears() + ":Months-" + period.getMonths() + ":Days-" + period.getDays();
+
+		//YOUR CODE ENDS HERE
 	}
 
 	public static void main(String[] args) {
